@@ -1,0 +1,181 @@
+#navMenu>li ul li a#cur {
+	color: #ffff33;
+}
+
+.content {
+	padding: 16px 0 0 13px;
+}
+
+.titlebg {
+	height: 110px;
+	width: 932px;
+	background-color: #bae0f3;
+}
+
+.title {
+	color: #09719f;
+	font-size: 26px;
+	font-weight: normal;
+	width: 262px;
+	padding: 30px 0 6px 38px;
+	border-bottom: 2px solid #ffffff;
+}
+
+.Entitle {
+	color: #ffffff;
+	font-weight: normal;
+	padding: 5px 0 0 38px; 
+}
+
+.wrap {
+	margin-top: 15px;
+	overflow: hidden;
+	margin-bottom: 9px;
+}
+
+.part {
+	background-color: #effaff;
+	border: 1px solid #a3b4bf;
+	float: left;
+}
+
+.part li {
+	font-size: 14px;
+	padding: 10px 86px 10px 71px;
+}
+
+.first_aid li {
+	background: url(../images/first_aidbg.png) no-repeat 21px 9px;
+}
+
+.ordinary li {
+	background: url(../images/ordinarybg.png) no-repeat 21px 9px;
+}
+
+.expert li {
+	background: url(../images/expertbg.png) no-repeat 21px 9px;
+}
+
+.test li {
+	background: url(../images/testbg.png) no-repeat 21px 9px;
+}
+
+.assistant li {
+	background: url(../images/assistantbg.png) no-repeat 21px 9px;
+}
+
+.traffic li {
+	background: #419cd5 url(../images/trafficonbg.png) no-repeat 21px 9px;
+}
+
+.traffic {
+	color: #ffffff;
+}
+
+.medical_guide {
+	width: 696px;
+	height: 685px;
+	margin-right: 13px;
+	border: 1px solid #a3b4bf;
+	float: right;
+}
+
+.cur {
+	background-color: #b5dff3;
+	font-size: 14px;
+	padding: 10px 23px;
+}
+
+.guide {
+	overflow: hidden;
+}
+
+.guide h2 {
+	font-size: 28px;
+	font-weight: normal;
+	color: #09719f;
+	padding-left: 10px;
+	margin-bottom: 10px;
+	border-left: 3px solid #419cd5;
+	margin: 12px 10px 14px 10px;
+}
+
+.guide ul {
+	float: right;
+}
+
+.guide li {
+	font-size: 18px;
+	text-align: center;		
+	float: left;
+}
+
+.first {
+	width: 324px;
+	height: 42px;
+}
+
+.last {
+	width: 10px;
+	height: 42px;
+}
+
+.shop,.bus {
+	height: 42px;
+	width: 120px;
+	line-height: 43px;
+}
+
+.shop a,.bus a {
+	color: #000000;
+}
+
+.first,.shop,.bus,.last {
+	border-bottom: 1px solid #1e7da7;
+}
+
+.map_guide {
+	height: 40px;
+	width: 120px;
+	line-height: 40px;
+	border-left: 1px solid #1e7da7;
+	border-top: 3px solid #1e7da7;
+	border-right: 1px solid #1e7da7;
+	border-bottom: none;
+}
+
+.query {
+	margin-top: 69px;
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #000000;
+}
+
+.query input {
+	width: 150px;
+	height: 30px;
+	border: 1px solid #09719f;
+	margin-left: 25px;
+}
+
+.query span {
+	display: inline-block;
+	width: 44px;
+	height: 32px;
+	background: url(../images/arrows.png) no-repeat 12px 8px;
+	border: 1px solid #a0a0a0;
+	margin-left: 22px;
+}
+
+.query button {
+	font-size: 18px;
+	color: #ffffff;
+	background-color: #419cd5;
+	width: 100px;
+	height: 34px;
+	border: 1px solid #09719f;
+	margin-left: 20px;
+}
+
+.map {
+	margin: 20px 10px;
+}
