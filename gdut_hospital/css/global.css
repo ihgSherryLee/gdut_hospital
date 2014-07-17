@@ -1,0 +1,243 @@
+/* Left & Right alignment */
+.left {float: left}
+.right {float: right}
+.wrapper {width: 100%;	overflow:hidden}
+/* Global properties ======================================================== */
+body {
+	background: #ffffff top center;
+	border: 0;
+	min-width: 960px;
+	font: 14px  "微软雅黑", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #09719f;
+}
+
+/* Global Structure ============================================================= */
+.main {
+	margin: 0 auto;
+	background: #ffffff;
+}
+/* ============================= main layout ====================== */
+a {
+	color:#09719f;
+	text-decoration: none;
+	outline: none;
+}
+a:hover {	text-decoration: underline;	}
+
+h2 {
+	font-size: 13px;
+	color: #09719f;
+	line-height: 1.2em;
+	letter-spacing: -1px;
+}
+h2 span {
+	color: #ff0000;
+}
+/* ============================= header ====================== */
+.header {
+	background: url(../images/headbg.png);
+}
+.header #logo {
+	display: block;
+	text-align: center;
+}
+.header .bg_wrap {
+	width: 100%;
+	height: 65px;
+	background: #0d5b7d;
+}
+.header .nav_wrap {
+	width: 100%;
+	height: 37px;
+	background: #2994c1;
+}
+.nav_menu {
+	position: relative;
+	width: 900px;
+	margin: auto;
+	text-align: center;
+	background: #1d8cbd;
+}
+.nav_menu>li, .nav_menu>li ul li{
+	float: left;
+	position: relative;
+	list-style: none;
+}
+.nav_menu>li {
+	width: 109px;
+}
+.nav_menu>li ul li {
+	float: left;
+	margin: 0px 10px;	
+}
+.nav_menu>li a {
+	color: #ffffff;
+	line-height: 37px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-decoration: none;
+
+}
+
+.nav_menu>li:hover>a {
+	letter-spacing: 1px;
+}
+.nav_menu>li ul {
+	position: absolute;
+	text-align: center;
+	display: none;
+}
+
+.nav_menu>li ul li a {
+	line-height: 28px;
+}
+.nav_menu>li ul li a:hover {
+	color: #ffff33;
+}
+.nav_menu>li:hover ul, .nav_menu>li:hover, .current{
+	display: block;
+	background: #0d5b7d;
+	
+}
+.nav_menu li ul span {
+	float: left;
+	line-height: 28px;
+}
+.bar{
+	float: left;
+	width: 2px;
+	height: 35px;
+	background: url(../images/bar.png) #1d8cbd center no-repeat;
+	line-height: 35px;
+}
+/* ============================= content ====================== */
+.content{
+	background: #ffffff;
+	width: 960px;
+	margin: auto;
+}
+
+.nav_block {
+	float: left;
+	border: 1px solid #a3b4bf;
+	margin: 7px 9px;
+	overflow: hidden;
+}
+
+.titlebg {
+	height: 26px;
+	background-color: #b3dff2;
+	padding: 6px 15px 0 8px;
+}
+
+.nav_block h2 {
+	color: #05719f;
+	font-size: 14px;
+	letter-spacing: 2px;
+	line-height: 20px;	
+	border-left: 5px solid #09719f;
+	margin: 0;
+	padding-left: 4px;
+}
+
+.nav_block h2 span a {
+	color: #c30c21;
+}
+
+.nav_block h2 span {
+	font-size: 12px;
+	float: right;
+}
+
+.nav_block li a {
+	color: #05719f;
+}
+
+.nav_block li {
+	font-size: 13px;
+	height: 23px;
+	padding-top: 3px;
+}
+
+.nav_block ul {
+	list-style: initial;
+	color: #09719f;
+	padding-left: 28px;
+}
+
+.nav_block>ul li span {
+	float: right;
+	color: #707070;
+	margin-right: 10px;
+}
+
+.nav_block>ul li div {
+	float: left;
+}
+/*=== links ===*/
+.friends_link {
+	height: 33px;
+	width: 100%;
+	margin: 7px auto;
+	overflow: hidden;
+	border-color: #a3b4bf;
+	border-style: solid;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	background: #effaff;
+	letter-spacing: 1px;
+}
+.friends_link .links_wrap {
+	width: 960px;
+	padding-left: 16px;
+	margin: auto;
+}
+.friends_link .titlebg {
+	width: 80px;
+}
+.friends_link h2 {
+	text-align: center;
+}
+.friends_link ul {
+	list-style: none;
+	margin: -28px 0px 0px 96px;
+
+}
+.friends_link ul li {
+	float: left;
+	margin-right: 45px;
+}
+/*===  ===*/
+/* ============================= footer ====================== */
+.footer {
+	background-color: #505050;
+	float: left;
+	width: 100%;
+	height: 82px;
+	padding-top: 15px;
+	text-align: center;
+	line-height: 35px;
+	font-size: 13px;
+	color: #ffffff;
+}
+.footer ul {
+	background: #505050;
+	height: 35px;
+	letter-spacing: 1px;
+}
+.footer p {
+	color: #b4b4b4;
+}
+.footer ul span {
+	line-height: 32px;
+}
+.footer ul li{
+	display: inline;
+	list-style: none;
+	position: relative;
+}
+.footer a {
+	color: #ffffff;
+}
