@@ -1,0 +1,145 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+
+.query {
+    margin-top: 22px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #000000;
+}
+
+.query h4 {
+    color: #000000;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+}
+
+.query p {
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.result {
+    text-indent: 28px;
+}
+
+#l-map{height:100%;width:78%;float:left;border-right:2px solid #bcbcbc;}
+#r-result{height:100%;width:21%;float:left;overflow: auto;}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.4&services=true"></script>
+<title>公交/地铁线路查询</title>
+</head>
+<body>
+    <div class="query">
+        <h4>公交路线</h4>
+        <p class="result">可乘坐公交K186路、62路、517路、K517（区间）路、18/K18路、208（夜间线）路、401路、45/K45路、591路、30路、30（大站线）路、68/K68路、14/K14路、60/K60路、212（夜间线）路、207（夜间线）路、31路、111路在浙一医院站下。<a href="#" id="bus383">383</a>、<a href="#" id="bus201">番201路</a></p>
+        <p class="attention">（请注意公交线路是否有变动，如有变动，以公交站牌显示路线为准）左键双击地图放大，右键双击缩小</p>
+    </div>
+<div id="l-map"></div>
+<div id="r-result"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+// 百度地图API功能
+var map = new BMap.Map("l-map");            // 创建Map实例
+map.centerAndZoom(new BMap.Point(113.40132,23.050898), 15);
+setTimeout(function(){
+        addMarker();
+},1500);
+var busline = new BMap.BusLineSearch(map,{
+    renderOptions:{map:map,panel:"r-result"},
+        onGetBusListComplete: function(result){
+           if(result) {
+             var fstLine = result.getBusListItem(0);//获取第一个公交列表显示到map上
+             busline.getBusLine(fstLine);
+           }
+        }
+});
+var bus383 = document.getElementById("bus383");
+var bus201 = document.getElementById("bus201");
+bus383.onclick = function(){
+    setTimeout(function(){
+        var busName = 383;
+        busline.getBusList(busName);
+    },10);
+    setTimeout(function(){
+        addMarker();
+    },1500);
+};
+bus201.onclick = function(){
+    setTimeout(function(){
+        var busName = "番201路";
+        busline.getBusList(busName);
+        addMarker();
+    },10);
+    setTimeout(function(){
+        addMarker();
+    },1500);
+};
+
+
+//标注点数组
+    var markerArr = [{title:"广工大校医院",content:"地址：&nbsp; 广州市番禺区广东工业大学大学城校区内&nbsp;<br/>电话：&nbsp;  020-37626966<br/>标签：大学城",point:"113.40092|23.050865",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+         ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+            var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+            var iw = createInfoWindow(i);
+            var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+            marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+            
+            (function(){
+                var index = i;
+                var _iw = createInfoWindow(i);
+                var _marker = marker;
+                _marker.addEventListener("click",function(){
+                    this.openInfoWindow(_iw);
+                });
+                _iw.addEventListener("open",function(){
+                    _marker.getLabel().hide();
+                })
+                _iw.addEventListener("close",function(){
+                    _marker.getLabel().show();
+                })
+                label.addEventListener("click",function(){
+                    _marker.openInfoWindow(_iw);
+                })
+                if(!!json.isOpen){
+                    label.hide();
+                    _marker.openInfoWindow(_iw);
+                }
+            })()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+</script>

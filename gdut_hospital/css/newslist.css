@@ -1,15 +1,14 @@
 .content {
-	padding: 16px 0 0 13px;
-	height: 930px;
-}
-
-.titlebg {
-	height: 110px;
-	width: 932px;
-	background-color: #bae0f3;
+	padding-top: 16px;
 }
 
 .title {
+	height: 110px;
+	width: 960px;
+	background-color: #bae0f3;
+}
+
+.Chtitle {
 	color: #09719f;
 	font-size: 26px;
 	font-weight: normal;
@@ -41,17 +40,17 @@
 	padding: 10px 86px 10px 71px;
 }
 
-.hospital_news li {
+.part_cur li {
 	background: #419cd5 url(../images/newsonbg.png) no-repeat 21px 9px;
 }
 
-.part a {
+.part_cur {
 	color: #ffffff;
 }
 
-.list {
+.news {
 	width: 696px;
-	margin-right: 13px;
+	min-height: 685px;
 	border: 1px solid #a3b4bf;
 	float: right;
 }
@@ -62,16 +61,17 @@
 	padding: 10px 23px;
 }
 
-.newslist {
-	margin: 12px 10px 14px 10px;
-}
-
-.newslist h2 {
+.news h2 {
 	font-size: 28px;
 	font-weight: normal;
 	color: #09719f;
 	padding-left: 10px;
+	margin: 12px 10px 0 10px;
 	border-left: 3px solid #419cd5;
+}
+
+.list {
+	margin: 0 10px 14px 10px;
 }
 
 .essay {

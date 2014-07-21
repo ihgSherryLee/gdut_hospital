@@ -40,27 +40,19 @@
 	padding: 10px 86px 10px 71px;
 }
 
-.hospital li {
-	background: url(../images/hospitalbg.png) no-repeat 21px 9px;
-}
-
 .part_cur li {
-	background: #419cd5 url(../images/expertonbg.png) no-repeat 21px 9px;
+	background: #419cd5 url(../images/preventonbg.png) no-repeat 21px 9px;
 }
 
-.doctor li {
-	background: url(../images/doctorbg.png) no-repeat 21px 9px;
-}
-
-.rules li {
-	background: url(../images/rulesbg.png) no-repeat 21px 9px;
+.health_edu li {
+	background: url(../images/health_edubg.png) no-repeat 21px 9px;
 }
 
 .part_cur {
 	color: #ffffff;
 }
 
-.introduction {
+.health_care {
 	width: 696px;
 	min-height: 685px;
 	border: 1px solid #a3b4bf;
@@ -73,25 +65,60 @@
 	padding: 10px 23px;
 }
 
-.introduction h2 {
+.health_care h2 {
 	font-size: 28px;
 	font-weight: normal;
 	color: #09719f;
 	padding-left: 10px;
-	margin: 12px 10px 14px 10px;
 	border-left: 3px solid #419cd5;
+	margin: 12px 10px 14px 10px;
 }
 
-.table {
+.list {
 	margin: 0 10px 14px 10px;
 }
 
-.table th {
-	font-size: 20px;
+.prevent_intro {
+	height: 88px;
+	padding: 12px 0 15px;
+	margin: 0 13px 0 15px;
+	border-bottom: 2px dotted #7d7d7d;
+}
+
+.prevent_intro h4 {
+	letter-spacing: 1px;
+	padding-bottom: 8px;
+}
+
+.date {
+	color: #707070;
+	font-weight: normal;
+	float: right;
+}
+
+.prevent_intro p {
+	color: #000000;
+	font-size: 13px;
+	text-indent: 28px;
+	letter-spacing: 1px;
+	line-height: 20px;
+}
+
+.data {
 	color: #000000;
 	text-align: center;
-	line-height: 30px;
-	border: 2px solid #09719f;
-	width: 98px;
-	height: 32px;
+	padding-top: 23px;
+}
+
+.data a {
+	color: #000000;
+}
+
+.data span {
+	display: inline-block;
+	width: 40px;
+	height: 15px;
+	line-height: 15px;
+	margin-top: 3px;
+	border: 1px solid #000000;
 }

@@ -1,22 +1,14 @@
-#navMenu>li ul {
-	display: block;
-}
-
-#navMenu>li ul li a#cur {
-	color: #ffff33;
-}
-
 .content {
-	padding: 16px 0 0 13px;
-}
-
-.titlebg {
-	height: 110px;
-	width: 932px;
-	background-color: #bae0f3;
+	padding-top: 16px;
 }
 
 .title {
+	height: 110px;
+	width: 960px;
+	background-color: #bae0f3;
+}
+
+.Chtitle {
 	color: #09719f;
 	font-size: 26px;
 	font-weight: normal;
@@ -60,18 +52,17 @@
 	background: url(../images/doctorbg.png) no-repeat 21px 9px;
 }
 
-.rules li {
+.part_cur li {
 	background: #419cd5 url(../images/rulesonbg.png) no-repeat 21px 9px;
 }
 
-.rules {
+.part_cur {
 	color: #ffffff;
 }
 
 .introduction {
 	width: 696px;
-	height: 685px;
-	margin-right: 13px;
+	min-height: 685px;
 	border: 1px solid #a3b4bf;
 	float: right;
 }
@@ -82,22 +73,23 @@
 	padding: 10px 23px;
 }
 
-.essay {
-	margin: 12px 10px 14px 10px;
-}
-
-.essay h2 {
+.introduction h2 {
 	font-size: 28px;
 	font-weight: normal;
 	color: #09719f;
 	padding-left: 10px;
-	margin-bottom: 10px;
+	margin: 12px 10px 14px 10px;
 	border-left: 3px solid #419cd5;
 }
 
-.essay h3 {
+.essay {
+	margin: 0 10px 14px 10px;
+}
+
+.essay h4 {
 	font-size: 14px;
 	color: #000000;
+	letter-spacing: 1px;
 	text-align: center;
 	margin-top: 15px;
 	margin-bottom: 10px;
@@ -110,13 +102,15 @@
 .essay p {
 	font-size: 13px;
 	color: #000000;
-	text-indent: 26px;
+	letter-spacing: 1px;
+	text-indent: 28px;
 	line-height: 25px;
 }
 
 .essay ol li {
 	font-size: 13px;
 	color: #000000;
-	text-indent: 26px;
+	letter-spacing: 1px;
+	text-indent: 28px;
 	line-height: 25px;
 }

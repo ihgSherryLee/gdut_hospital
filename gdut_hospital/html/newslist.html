@@ -4,7 +4,7 @@
 		<title>消息列表页</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="../css/globle.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="../css/global.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="../css/newslist.css" type="text/css" media="screen">
 <!--[if lt IE 9]>
 	<script type="text/javascript" src="js/html5.js"></script>
@@ -19,68 +19,94 @@
 <![endif]-->
 	</head>
 	<body id="page1">
-		<div class="main">
 <!-- header -->
-		<div id="header">
-			<a href="index.html" id="logo"><img src="../images/headPhoto.png"></a>
-			<ul id="navMenu">
-				<span class="bar"></span>
-				<li><a href="index.html">&gt医院主页</a></li>
-				<span class="bar"></span>
-				<li><a href="">&gt医院概况</a>
-					<ul>
-						<li><a href="">医院简介</a></li><span>|</span>
-						<li><a href="">专家介绍</a></li><span>|</span>
-						<li><a href="">医护人员</a></li><span>|</span>
-						<li><a href="">规章制度</a></li>
+		<div class="header">
+			<a href="index.html" id="logo"><img src="../images/head.jpg"></a>
+			<div class="bg_wrap">
+				<div class="nav_wrap">
+					<ul class="nav_menu">
+						<span class="bar"></span>
+						<li>
+							<a href="index.html">&gt医院主页</a>
+							<ul>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li><a href="">&gt医院概况</a>
+							<ul>
+								<li><a href="">医院简介</a></li><span>|</span>
+								<li><a href="">专家介绍</a></li><span>|</span>
+								<li><a href="">医护人员</a></li><span>|</span>
+								<li><a href="">规章制度</a></li>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li>
+							<a class="current" href="#">&gt医院新闻</a>
+							<ul>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li>
+							<a href="#">&gt就医指南</a>
+							<ul>
+								<li><a href="">急诊指南</a></li><span>|</span>
+								<li><a href="">普通门诊</a></li><span>|</span>
+								<li><a href="">专家门诊</a></li><span>|</span>
+								<li><a href="">化验检查</a></li><span>|</span>
+								<li><a href="">辅助检查</a></li><span>|</span>
+								<li><a href="">交通指南</a></li>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li>
+							<a href="#">&gt科室介绍</a>
+							<ul>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li>
+							<a href="#">&gt健康保健</a>
+							<ul>
+								<li><a href="">预防保健</a></li><span>|</span>
+								<li><a href="">健康教育</a></li>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li>
+							<a href="#">&gt公费医疗</a>
+							<ul>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li>
+							<a href="#">&gt交流平台</a>
+							<ul>
+								<li><a href="">意见反馈</a></li><span>|</span>
+								<li><a href="">下载专区</a></li>
+							</ul>
+						</li>
+						<span class="bar"></span>
 					</ul>
-				</li>
-				<span class="bar"></span>
-				<li><a href="#" class="current">&gt医院新闻</a></li>
-				<span class="bar"></span>
-				<li><a href="#">&gt就医指南</a></li>
-				<span class="bar"></span>
-				<li><a href="#">&gt科室介绍</a></li>
-				<span class="bar"></span>
-				<li><a href="#">&gt健康保健</a></li>
-				<span class="bar"></span>
-				<li><a href="#">&gt公费医疗</a></li>
-				<span class="bar"></span>
-				<li><a href="#">&gt交流平台</a></li>
-				<span class="bar"></span>
-			</ul>
+				</div>
+			</div>
 		</div>
-
-	<!-- <div id="showPic">
-		<img src="images/p1.jpg">
-		<img src="images/p2.jpg">
-		<img src="images/p3.jpg">
-		<img src="images/p4.jpg">
-		<img src="images/p5.jpg" class="currentPic">
-	</div><ul id="picPot">
-			<li class="currentPot">1</li>
-			<li>2</li>
-			<li>3</li>
-			<li>4</li>
-			<li>5</li>
-		</ul> -->
-<!-- / header -->
 <!-- content -->
 		<div class="content">
-			<div class="titlebg">
-				<h1 class="title">医院新闻</h1>
+			<div class="title">
+				<h1 class="Chtitle">医院新闻</h1>
 				<h4 class="Entitle">News</h4>	
 			</div>
 			<div class="wrap">
 				<div class="part">
 					<ul>
-						<a class="hospital_news" href="#"><li>医院新闻</li></a>
+						<a class="hospital_news part_cur" href="#"><li>医院新闻</li></a>
 					</ul>
 				</div>
-				<div class="list">
+				<div class="news">
 					<div class="cur">当前位置：<a href="#">首页</a> > <a href="#">医院新闻</a></div>
-					<div class="newslist">
-						<h2>医院新闻</h2>
+					<h2>医院新闻</h2>
+					<div class="list">
 						<div class="essay">
 							<img src="../images/news.jpg">
 							<div class="essay_intro">
@@ -109,6 +135,13 @@
 								<p>医院绩效工资改革工作小组名单林清霞、黎明、尚娟、朱冬梅、王娴贤、何洲、罗建明、陈惠娜、罗绮玉</p>
 							</div>
 						</div>
+						<div class="essay">
+							<img src="../images/news.jpg">
+							<div class="essay_intro">
+								<h4><a href="#">医院租赁人员转雇员的推荐方法</a><span class="date">2013-11-22</span></h4>
+								<p>一、推荐条件：（1）具有中专及中专以上学历（2）热爱医务工作，在医院工作满2年以上，安心工作且有继续为学校服务的意向。（3）吃苦耐劳，服从组织统一的工作安排。4）有扎实的医学、药学或护理的理论基础，有较强的医学……</p>
+							</div>
+						</div>
 						<div class="data">
 							共&nbsp;60&nbsp;条&nbsp;&nbsp;&nbsp;1&nbsp;/&nbsp;20&nbsp;页&nbsp;&nbsp;&nbsp;
 							<a href="#">首页</a>&nbsp;&nbsp;&nbsp;
@@ -120,9 +153,11 @@
 					</div>
 				</div>	
 			</div>	
+		</div>
 <!-- Links -->
-			<div class="normalBlock" id="links">
-				<div class="titleBg">
+		<div class="nav_block friends_link">
+			<div class="links_wrap">
+				<div class="titlebg">
 					<h2>友情链接</h2>
 				</div>
 				<ul>
@@ -133,16 +168,10 @@
 					<li>	<a href="#">广东省专业资格考试中心</a>	</li>
 				</ul>
 			</div>
-<!--  -->
-
 		</div>
-
-
-<!-- / content -->
-	
-
+<!--  -->
 <!-- footer -->
-		<div id="footer" >
+		<div class="footer" >
 			<ul>
 				<li><a href="">设为首页</a>		<span>|</span>	</li>
 				<li><a href="">加入收藏</a>		<span>|</span>	</li>
@@ -154,17 +183,7 @@
 			<p>Copyright&nbsp©&nbsp2003-2014&nbsp&nbsp广东工业大学医院&nbsp&nbsp版权所有</p>
 		</div>
 <!-- / footer -->
-		</div>
 <!-- javascript -->
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<!-- 
-	<script type="text/javascript">
-		$(function(){
-			var picChil = $('#showPic').find("img");
-			console.log(picChil[0]);
-				picChil.fadeOut(500);
-		});
-	</script> 
--->
-	</body>
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script src="../js/global.js"></script>	</body>
 </html>

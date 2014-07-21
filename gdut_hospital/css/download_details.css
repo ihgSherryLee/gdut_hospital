@@ -40,27 +40,19 @@
 	padding: 10px 86px 10px 71px;
 }
 
-.hospital li {
-	background: url(../images/hospitalbg.png) no-repeat 21px 9px;
+.feedback li {
+	background: url(../images/feedbackbg.png) no-repeat 21px 9px;
 }
 
 .part_cur li {
-	background: #419cd5 url(../images/expertonbg.png) no-repeat 21px 9px;
-}
-
-.doctor li {
-	background: url(../images/doctorbg.png) no-repeat 21px 9px;
-}
-
-.rules li {
-	background: url(../images/rulesbg.png) no-repeat 21px 9px;
+	background: #419cd5 url(../images/downloadonbg.png) no-repeat 21px 9px;
 }
 
 .part_cur {
 	color: #ffffff;
 }
 
-.introduction {
+.communication {
 	width: 696px;
 	min-height: 685px;
 	border: 1px solid #a3b4bf;
@@ -73,25 +65,45 @@
 	padding: 10px 23px;
 }
 
-.introduction h2 {
+.communication h2 {
 	font-size: 28px;
 	font-weight: normal;
 	color: #09719f;
 	padding-left: 10px;
-	margin: 12px 10px 14px 10px;
 	border-left: 3px solid #419cd5;
+	margin: 12px 10px 14px 10px;
 }
 
-.table {
-	margin: 0 10px 14px 10px;
+.details {
+	margin: 0 24px 14px 24px;
 }
 
-.table th {
-	font-size: 20px;
+.details h4 {
+	font-size: 15px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 7px;
+}
+
+.data {
+	font-size: 12px;
 	color: #000000;
 	text-align: center;
-	line-height: 30px;
-	border: 2px solid #09719f;
-	width: 98px;
-	height: 32px;
+	margin-bottom: 7px;
+}
+
+.attachment {
+	margin-top: 41px;
+	border-top: 1px dotted #929292;
+}
+
+.attachment h6 {
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 22px;
+	margin-top: 18px;
+}
+
+.attachment a {
+	margin-left: 26px;
 }

@@ -1,18 +1,14 @@
-#navMenu>li ul li a#cur {
-	color: #ffff33;
-}
-
 .content {
-	padding: 16px 0 0 13px;
-}
-
-.titlebg {
-	height: 110px;
-	width: 932px;
-	background-color: #bae0f3;
+	padding-top: 16px;
 }
 
 .title {
+	height: 110px;
+	width: 960px;
+	background-color: #bae0f3;
+}
+
+.Chtitle {
 	color: #09719f;
 	font-size: 26px;
 	font-weight: normal;
@@ -64,18 +60,17 @@
 	background: url(../images/assistantbg.png) no-repeat 21px 9px;
 }
 
-.traffic li {
+.part_cur li {
 	background: #419cd5 url(../images/trafficonbg.png) no-repeat 21px 9px;
 }
 
-.traffic {
+.part_cur {
 	color: #ffffff;
 }
 
 .medical_guide {
 	width: 696px;
-	height: 685px;
-	margin-right: 13px;
+	/*min-height: 685px;*/
 	border: 1px solid #a3b4bf;
 	float: right;
 }
@@ -90,7 +85,7 @@
 	overflow: hidden;
 }
 
-.guide h2 {
+.medical_guide h2 {
 	font-size: 28px;
 	font-weight: normal;
 	color: #09719f;
@@ -142,33 +137,4 @@
 	border-top: 3px solid #1e7da7;
 	border-right: 1px solid #1e7da7;
 	border-bottom: none;
-}
-
-.query {
-	margin-top: 69px;
-	padding-left: 13px;
-	padding-right: 13px;
-	padding-bottom: 10px;
-	border-bottom: 1px dotted #000000;
-}
-
-.query h4 {
-	color: #000000;
-	letter-spacing: 2px;
-	padding-bottom: 5px;
-}
-
-.query p {
-	font-size: 13px;
-	color: #000000;
-	letter-spacing: 2px;
-	line-height: 25px;
-}
-
-.result {
-	text-indent: 30px;
-}
-
-.map {
-	margin: 20px 10px;
 }

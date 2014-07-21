@@ -4,7 +4,7 @@
 		<title>科室介绍页</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="../css/globle.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="../css/global.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="../css/department.css" type="text/css" media="screen">
 <!--[if lt IE 9]>
 	<script type="text/javascript" src="js/html5.js"></script>
@@ -19,87 +19,132 @@
 <![endif]-->
 	</head>
 	<body id="page1">
-		<div class="main">
-<!-- header -->
-		<div id="header">
-			<a href="index.html" id="logo"><img src="../images/headPhoto.png"></a>
-			<ul id="navMenu">
-				<span class="bar"></span>
-				<li><a href="index.html">&gt医院主页</a></li>
-				<span class="bar"></span>
-				<li><a href="">&gt医院概况</a>
-					<ul>
-						<li><a href="">医院简介</a></li><span>|</span>
-						<li><a href="">专家介绍</a></li><span>|</span>
-						<li><a href="">医护人员</a></li><span>|</span>
-						<li><a href="">规章制度</a></li>
+		
+		<div class="header">
+			<a href="index.html" id="logo"><img src="../images/head.jpg"></a>
+			<div class="bg_wrap">
+				<div class="nav_wrap">
+					<ul class="nav_menu">
+						<span class="bar"></span>
+						<li>
+							<a href="index.html">&gt医院主页</a>
+							<ul>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li><a href="">&gt医院概况</a>
+							<ul>
+								<li><a href="">医院简介</a></li><span>|</span>
+								<li><a href="">专家介绍</a></li><span>|</span>
+								<li><a href="">医护人员</a></li><span>|</span>
+								<li><a href="">规章制度</a></li>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li>
+							<a href="#">&gt医院新闻</a>
+							<ul>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li>
+							<a href="#">&gt就医指南</a>
+							<ul>
+								<li><a href="">急诊指南</a></li><span>|</span>
+								<li><a href="">普通门诊</a></li><span>|</span>
+								<li><a href="">专家门诊</a></li><span>|</span>
+								<li><a href="">化验检查</a></li><span>|</span>
+								<li><a href="">辅助检查</a></li><span>|</span>
+								<li><a href="">交通指南</a></li>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li>
+							<a class="current" href="#">&gt科室介绍</a>
+							<ul>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li>
+							<a href="#">&gt健康保健</a>
+							<ul>
+								<li><a href="">医院院院简介</a></li><span>|</span>
+								<li><a href="">专家介绍</a></li><span>|</span>
+								<li><a href="">医护人员员员</a></li>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li>
+							<a href="#">&gt公费医疗</a>
+							<ul>
+							</ul>
+						</li>
+						<span class="bar"></span>
+						<li>
+							<a href="#">&gt交流平台</a>
+							<ul>
+								<li><a href="">意见反馈</a></li><span>|</span>
+								<li><a href="">下载专区</a></li>
+							</ul>
+						</li>
+						<span class="bar"></span>
 					</ul>
-				</li>
-				<span class="bar"></span>
-				<li><a href="#">&gt医院新闻</a></li>
-				<span class="bar"></span>
-				<li><a href="#">&gt就医指南</a></li>
-				<span class="bar"></span>
-				<li><a href="#" class="current">&gt科室介绍</a></li>
-				<span class="bar"></span>
-				<li><a href="#">&gt健康保健</a></li>
-				<span class="bar"></span>
-				<li><a href="#">&gt公费医疗</a></li>
-				<span class="bar"></span>
-				<li><a href="#">&gt交流平台</a></li>
-				<span class="bar"></span>
-			</ul>
+				</div>
+			</div>
 		</div>
-
-	<!-- <div id="showPic">
-		<img src="images/p1.jpg">
-		<img src="images/p2.jpg">
-		<img src="images/p3.jpg">
-		<img src="images/p4.jpg">
-		<img src="images/p5.jpg" class="currentPic">
-	</div><ul id="picPot">
-			<li class="currentPot">1</li>
-			<li>2</li>
-			<li>3</li>
-			<li>4</li>
-			<li>5</li>
-		</ul> -->
 <!-- / header -->
 <!-- content -->
 		<div class="content">
-			<div class="titlebg">
-				<h1 class="title">科室介绍</h1>
+			<div class="title">
+				<h1 class="Chtitle">科室介绍</h1>
 				<h4 class="Entitle">Department</h4>	
 			</div>
 			<div class="wrap">
-				<div>
-					<div class="part">
-						<ul>
-							<a class="department" href="#"><li>科室介绍</li></a>
-						</ul>
-					</div>
-					<div class="intro">
-						<div class="cur">当前位置：<a href="#">首页</a> > <a href="#">科室介绍</a></div>
-						<div class="list">
-							<h2>科室介绍</h2>
-							<ul>
-								<li><a href="#">内科</a></li>
-								<li><a href="#">妇科</a></li>
-								<li><a href="#">中医科</a></li>
-								<li><a href="#">口腔科</a></li>
-								<li><a href="#">预防保健科</a></li>
-								<li><a href="#">眼耳鼻喉科</a></li>
-								<li><a href="#">放射科</a></li>
-								<li><a href="#">B超心电图室</a></li>
-								<li><a href="#">检验科</a></li>
-							</ul>
+				<div class="part">
+					<ul>
+						<a class="department part_cur" href="#"><li>科室介绍</li></a>
+					</ul>
+				</div>
+				<div class="department_intro">
+					<div class="cur">当前位置：<a href="#">首页</a> > <a href="#">科室介绍</a></div>
+					<h2>科室介绍</h2>
+					<div class="list">
+						<div class="intro">
+							<h4><a href="#">内科</a></h4>
+							<p>教工公费医疗管理制度 根据国家、省有关文件规定，实行干部职工个人自负一定比例的医药费，同时发放医贴的办法。一、 报销比例 (一)在职教工：校内门诊报销85%；个人自负15%；校外门诊报销80%，个人自负20%；院报销94%，个人自负6%；校外住院报销90%，个人自负10%……</p>
+						</div>
+						<div class="intro">
+							<h4><a href="#">妇科</a></h4>
+							<p>广东工业大学学生参加城镇居民医保普通门(急)诊医疗管理暂行办法 根据《广州市城镇居民基本医疗保险试法》（穗府办[2008]22号）和《关于调整<广州市城镇居民基本医疗保险试行办法>有关规定的通知》（穗劳社[20号）精神，我校学生已纳入城镇居民基本医疗保险，并选用……</p>
+						</div>
+						<div class="intro">
+							<h4><a href="#">中医科</a></h4>
+							<p>转诊制度及选定医疗机构（一）转诊制度：原则上我校教工、参保学生患病须先到校医院就诊（急诊除外），经校医院医生处理，由于条件所限或病情所需应转到大医院诊疗的，由接诊医生开具转诊单，转诊到校外门诊选疗机构就诊，所产生的医疗费用按规定比例报销……</p>
+						</div>
+						<div class="intro">
+							<h4><a href="#">口腔科</a></h4>
+							<p>广东工业大学学生参加城镇居民医保普通门(急)诊医疗管理暂行办法 根据《广州市城镇居民基本医疗保险试法》（穗府办[2008]22号）和《关于调整<广州市城镇居民基本医疗保险试行办法>有关规定的通知》（穗劳社[20号）精神，我校学生已纳入城镇居民基本医疗保险，并选用……</p>
+						</div>
+						<div class="intro">
+							<h4><a href="#">预防保健科</a></h4>
+							<p>转诊制度及选定医疗机构（一）转诊制度：原则上我校教工、参保学生患病须先到校医院就诊（急诊除外），经校医院医生处理，由于条件所限或病情所需应转到大医院诊疗的，由接诊医生开具转诊单，转诊到校外门诊选疗机构就诊，所产生的医疗费用按规定比例报销……</p>
+						</div>
+						<div class="data">
+						共&nbsp;60&nbsp;条&nbsp;&nbsp;&nbsp;1&nbsp;/&nbsp;20&nbsp;页&nbsp;&nbsp;&nbsp;
+						<a href="#">首页</a>&nbsp;&nbsp;&nbsp;
+						<a href="#">上一页</a>&nbsp;&nbsp;&nbsp;
+						第&nbsp;<span>1</span>&nbsp;页&nbsp;&nbsp;&nbsp;
+						<a href="#">下一页</a>&nbsp;&nbsp;&nbsp;
+						<a href="#">尾页</a>
 						</div>
 					</div>
 				</div>	
 			</div>	
+		</div>
 <!-- Links -->
-			<div class="normalBlock" id="links">
-				<div class="titleBg">
+		<div class="nav_block friends_link">
+			<div class="links_wrap">
+				<div class="titlebg">
 					<h2>友情链接</h2>
 				</div>
 				<ul>
@@ -110,16 +155,10 @@
 					<li>	<a href="#">广东省专业资格考试中心</a>	</li>
 				</ul>
 			</div>
-<!--  -->
-
 		</div>
-
-
-<!-- / content -->
-	
-
+<!--  -->
 <!-- footer -->
-		<div id="footer" >
+		<div class="footer" >
 			<ul>
 				<li><a href="">设为首页</a>		<span>|</span>	</li>
 				<li><a href="">加入收藏</a>		<span>|</span>	</li>
@@ -131,17 +170,8 @@
 			<p>Copyright&nbsp©&nbsp2003-2014&nbsp&nbsp广东工业大学医院&nbsp&nbsp版权所有</p>
 		</div>
 <!-- / footer -->
-		</div>
 <!-- javascript -->
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<!-- 
-	<script type="text/javascript">
-		$(function(){
-			var picChil = $('#showPic').find("img");
-			console.log(picChil[0]);
-				picChil.fadeOut(500);
-		});
-	</script> 
--->
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script src="../js/global.js"></script>
 	</body>
 </html>
