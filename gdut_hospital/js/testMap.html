@@ -8,13 +8,68 @@
     html,body{margin:0;padding:0;}
     .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
     .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
-    .query {
-    margin-top: 8px;
-    padding-bottom: 10px;
-    border-bottom: 1px dotted #000000;
+    #searchBar {
+        width: 697px;
+    }
+    .innerguide ul {
+        float: right;
+        padding: 0;
+        list-style: none;
+    }
+    .innerguide a {
+        text-decoration: none;
+    }
+    .innerguide a:hover {
+        text-decoration: underline;
+    }
+    .innerguide li {
+        font-size: 18px;
+        text-align: center;     
+        float: left;
     }
 
-    #dong_feng,#long_dong {
+    .first {
+        width: 324px;
+        height: 39px;
+    }
+
+    .last {
+        width: 10px;
+        height: 39px;
+    }
+
+    .guide_other {
+        height: 39px;
+        width: 120px;
+        line-height: 43px;
+    }
+
+    .guide_other a {
+        color: #000000;
+    }
+
+    .first,.guide_other,.last {
+        border-bottom: 1px solid #1e7da7;
+    }
+
+    .guide_cur {
+        height: 37px;
+        width: 120px;
+        line-height: 40px;
+        border-left: 1px solid #1e7da7;
+        border-top: 3px solid #1e7da7;
+        border-right: 1px solid #1e7da7;
+        border-bottom: none;
+    }
+    .query {
+        margin-top: -10px;
+        padding-bottom: 10px;
+        padding-left: 13px;
+        padding-right: 13px;
+        border-bottom: 1px dotted #000000;
+    }
+
+    .other {
         font-size: 18px;
         background-color: #ffffff;
         width: 68px;
@@ -23,7 +78,7 @@
         margin-left: 20px;
     }
 
-    #college_station {
+    .map_cur {
         font-size: 18px;
         color: #ffffff;
         background-color: #419cd5;
@@ -32,22 +87,75 @@
         border: 1px solid #aaaaaa;
         margin-left: 20px;
     }
+    #shop_page {
+        display: none;
+    }
+    #route_page {
+        display: none;
+    }
+    #route_page .query h4 {
+        color: #000000;
+        letter-spacing: 2px;
+        padding-bottom: 5px;
+    }
+
+    #route_page .query p {
+        font-size: 13px;
+        color: #000000;
+        letter-spacing: 1px;
+        line-height: 25px;
+    }
+
+    #route_page .result {
+        text-indent: 28px;
+    }
 </style>
 <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.4&services=true"></script>
 </head>
 
 <body>
     <div id="searchBar">
-        <div class="query">
-            <form>
-                <button id="college_station">大学城</button>
-                <button id="dong_feng">东风路</button>
-                <button id="long_dong">龙洞</button>
-            </form>
+        <div class="innerguide">
+            <ul>
+                <li class="first"></li>
+                <li class="guide_cur" id="map_guide"><a href="#">地图导航</a></li>
+                <li class="guide_other" id="shop"><a href="#">周边商户</a></li>
+                <li class="guide_other" id="bus"><a href="#">公交路线</a></li>
+                <li class="last"></li>
+            </ul>
+        </div>
+        <div id="map_page">
+            <div class="query">
+                <form>
+                    <button id="college_station" class="map_cur">大学城</button>
+                    <button id="dong_feng" class="other">东风路</button>
+                    <button id="long_dong" class="other">龙洞</button>
+                </form>
+            </div>
         </div>  
+        <div id="shop_page">
+            <div class="query">
+                <form>
+                    <button id="hotel" class="map_cur">酒店</button>
+                    <button id="bank" class="other">银行</button>
+                    <button id="other" class="other">酒店</button>
+                    <button id="catering" class="other">餐饮</button>
+                </form>
+            </div>
+            <div id="allmap"></div>
+        </div>
+        <div id="route_page">
+            <div class="query">
+                <h4>公交路线</h4>
+                <p class="result">可乘坐公交K186路、62路、517路、K517（区间）路、18/K18路、208（夜间线）路、401路、45/K45路、591路、30路、30（大站线）路、68/K68路、14/K14路、60/K60路、212（夜间线）路、207（夜间线）路、31路、111路在浙一医院站下。<a href="#" id="bus383">383</a>、<a href="#" id="bus201">番201路</a></p>
+                <p class="attention">（请注意公交线路是否有变动，如有变动，以公交站牌显示路线为准）左键双击地图放大，右键双击缩小</p>
+            </div>
+            <div id="l-map"></div>
+            <div id="r-result"></div>
+        </div>
     </div>
   <!--百度地图容器-->
-  <div style="width:697px;height:290px;" id="dituContent"></div>
+  <div style="width:696px;height:290px;" id="dituContent"></div>
 
 
 
@@ -125,14 +233,14 @@ li{
     //地图控件添加函数：
     function addMapControl(){
         //向地图中添加缩放控件
-	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
-	map.addControl(ctrl_nav);
+	   var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	   map.addControl(ctrl_nav);
         //向地图中添加缩略图控件
-	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
-	map.addControl(ctrl_ove);
+	   var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	   map.addControl(ctrl_ove);
         //向地图中添加比例尺控件
-	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-	map.addControl(ctrl_sca);
+	   var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	   map.addControl(ctrl_sca);
     }
     
     //标注点数组
@@ -219,27 +327,158 @@ li{
     //     });
     // }
     //创建和初始化地图
-
+    var map_guide = document.getElementById("map_guide");
+    var shop = document.getElementById("shop");
+    var bus = document.getElementById("bus");
+    var map_page = document.getElementById("map_page");
+    var shop_page = document.getElementById("shop_page");
+    var route_page = document.getElementById("route_page");
+    var current = map_guide;
     var college_station = document.getElementById("college_station");
     var dong_feng = document.getElementById("dong_feng");
     var long_dong = document.getElementById("long_dong");
     var pointCS = new BMap.Point(113.40132,23.050898);
     var pointDF = new BMap.Point(113.306311,23.141534);
     var pointLD = new BMap.Point(113.36996,23.202193);
+    initMap();
+
+    map_guide.onclick = function(){
+        console.log();
+        map_page.style.display = "block";
+        shop_page.style.display = "none";
+        route_page.style.display = "none";
+        map_guide.className = "guide_cur";
+        shop.className = "guide_other";
+        bus.className = "guide_other";
+        initMap();
+        return false;
+    };
     college_station.onclick = function(){
         map.panTo(pointCS);
         addMarker();//向地图中添加marker
+        college_station.className = "map_cur";
+        dong_feng.className = "other";
+        long_dong.className = "other";
         return false;
     };
     dong_feng.onclick = function(){
         map.panTo(pointDF);
+        dong_feng.className = "map_cur";
+        college_station.className = "other";
+        long_dong.className = "other";
         return false;
     };
     long_dong.onclick = function(){
         map.panTo(pointLD);
+        long_dong.className = "map_cur";
+        college_station.className = "other";
+        dong_feng.className = "other";
         return false;
-    }; 
-    initMap();
+    };
+    shop.onclick = function(){
+        shop_page.style.display = "block";
+        map_page.style.display = "none";
+        route_page.style.display = "none";
+        shop.className = "guide_cur";
+        map_guide.className = "guide_other";
+        bus.className = "guide_other";
+        initShopMap();
+    };
+    bus.onclick = function(){
+        route_page.style.display = "block";
+        shop_page.style.display = "none";
+        map_page.style.display = "none";
+        bus.className = "guide_cur";
+        map_guide.className = "guide_other";
+        shop.className = "guide_other";
+        initBusMap();
+    };
+
+    function initShopMap(){
+        map.setZoom(16);
+        map.clearOverlays();
+        var local = new BMap.LocalSearch(map, {
+            renderOptions:{map: map, autoViewport:true}
+        });
+        local.searchInBounds("酒店", map.getBounds());
+
+
+        var hotel = document.getElementById("hotel");
+        var bank = document.getElementById("bank");
+        // var  = document.getElementById("hotel");
+        var catering = document.getElementById("catering");
+        hotel.onclick = function(){
+            map.clearOverlays();
+            local.searchInBounds("酒店", map.getBounds());
+            hotel.className = "map_cur";
+            bank.className = "other";
+            catering.className = "other";
+            //hotel.className = "other";
+            return false;
+        };
+        bank.onclick = function(){
+            map.clearOverlays();
+            local.searchInBounds("银行", map.getBounds());
+            bank.className = "map_cur";
+            hotel.className = "other";
+            catering.className = "other";
+            //hotel.className = "other";
+            return false;
+        };
+        // hotel.onclick = function(){
+        // map.clearOverlays();
+        // local.searchInBounds("酒店", map.getBounds());
+        // hotel.className = "map_cur";
+        // bank.className = "other";
+        // catering.className = "other";
+        // return false;
+        //};
+        catering.onclick = function(){
+            map.clearOverlays();
+            local.searchInBounds("餐饮", map.getBounds());
+            catering.className = "map_cur";
+            bank.className = "other";
+            hotel.className = "other";
+            //hotel.className = "other";
+            return false;
+        };
+    }
+    function initBusMap(){
+        map.clearOverlays();
+        setTimeout(function(){
+                addMarker();
+        },1500);
+        var busline = new BMap.BusLineSearch(map,{
+            renderOptions:{map:map,panel:"r-result"},
+                onGetBusListComplete: function(result){
+                   if(result) {
+                     var fstLine = result.getBusListItem(0);//获取第一个公交列表显示到map上
+                     busline.getBusLine(fstLine);
+                   }
+                }
+        });
+        var bus383 = document.getElementById("bus383");
+        var bus201 = document.getElementById("bus201");
+        bus383.onclick = function(){
+            setTimeout(function(){
+                var busName = 383;
+                busline.getBusList(busName);
+            },10);
+            setTimeout(function(){
+                addMarker();
+            },1500);
+        };
+        bus201.onclick = function(){
+            setTimeout(function(){
+                var busName = "番201路";
+                busline.getBusList(busName);
+                addMarker();
+            },10);
+            setTimeout(function(){
+                addMarker();
+            },1500);
+        };
+    }
 </script>
 <!-- <script type="text/javascript">
 // 百度地图API功能

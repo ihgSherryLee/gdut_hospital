@@ -68,7 +68,7 @@ h2 span {
 }
 .nav_menu>li ul li {
 	float: left;
-	margin: 0px 10px;	
+	width: 105px;	
 }
 .nav_menu>li a {
 	color: #ffffff;
@@ -90,6 +90,9 @@ h2 span {
 
 .nav_menu>li ul li a {
 	line-height: 28px;
+}
+.nav_menu .nav_menu_cur {
+	color: #ffff33;
 }
 .nav_menu>li ul li a:hover {
 	color: #ffff33;
