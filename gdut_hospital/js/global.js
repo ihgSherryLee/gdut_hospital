@@ -133,22 +133,4 @@ $(function(){
 		$(".nav_menu").find("li").find("ul").css({display: "none"});
 		$currentUl.css({display: "block"});
 	});
-
-	// 专家介绍以及科室设置的切换
-	var $departmentSettingButton = $(".introduce_setting .setting");
-	var $expertIntroduceButton = $(".introduce_setting .introduce");
-	$departmentSettingButton.click(function(){
-		$(this).css({background: "#ffffff"});
-		$(this).parent().find(".introduce").css({background: "#b3dff2"});
-		$(this).parents(".introduce_setting").find("#introducePhoto").css({display: "none"});
-		$(this).parents(".introduce_setting").find("#setting_content").css({display: "block"});
-		return false;
-	});
-	$expertIntroduceButton.click(function(){
-		$(this).css({background: "#ffffff"});
-		$(this).parent().find(".setting").css({background: "#b3dff2"});
-		$(this).parents(".introduce_setting").find("#introducePhoto").css({display: "block"});
-		$(this).parents(".introduce_setting").find("#setting_content").css({display: "none"});
-		return false;
-	});
 });

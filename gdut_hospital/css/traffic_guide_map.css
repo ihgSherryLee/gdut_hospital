@@ -69,8 +69,7 @@
 }
 
 .medical_guide {
-	width: 696px;
-	/*min-height: 685px;*/
+	width: 712px;
 	border: 1px solid #a3b4bf;
 	float: right;
 }
@@ -93,50 +92,6 @@
 	border-left: 3px solid #419cd5;
 	margin: 12px 10px 14px 10px;
 }
-
-/*.guide ul {
-	float: right;
-}
-
-.guide li {
-	font-size: 18px;
-	text-align: center;		
-	float: left;
-}
-
-.first {
-	width: 324px;
-	height: 39px;
-}
-
-.last {
-	width: 10px;
-	height: 39px;
-}
-
-.shop,.bus {
-	height: 39px;
-	width: 120px;
-	line-height: 43px;
-}
-
-.shop a,.bus a {
-	color: #000000;
-}
-
-.first,.shop,.bus,.last {
-	border-bottom: 1px solid #1e7da7;
-}
-
-.map_guide {
-	height: 37px;
-	width: 120px;
-	line-height: 40px;
-	border-left: 1px solid #1e7da7;
-	border-top: 3px solid #1e7da7;
-	border-right: 1px solid #1e7da7;
-	border-bottom: none;
-}*/
 
 .query {
 	margin-top: 50px;
@@ -172,5 +127,4 @@
 
 .map {
 	width: 696px;
-	/*height: 290px;*/
 }
