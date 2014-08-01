@@ -14,11 +14,11 @@
 	font-weight: normal;
 	width: 262px;
 	padding: 30px 0 6px 38px;
-	border-bottom: 2px solid #ffffff;
+	border-bottom: 2px solid #f7f6f6;
 }
 
 .Entitle {
-	color: #ffffff;
+	color: #f7f6f6;
 	font-weight: normal;
 	padding: 5px 0 0 38px; 
 }
@@ -45,7 +45,7 @@
 }
 
 .part_cur li {
-	background: #419cd5 url(../images/expertonbg.png) no-repeat 21px 9px;
+	background: #419cd5 url(../images/expert_introonbg.png) no-repeat 21px 9px;
 }
 
 .doctor li {
@@ -54,6 +54,22 @@
 
 .rules li {
 	background: url(../images/rulesbg.png) no-repeat 21px 9px;
+}
+
+.hospital li:hover {
+	background: #8abce6 url(../images/hospitalonbg.png) no-repeat 21px 9px;
+}
+
+.doctor li:hover {
+	background: #8abce6 url(../images/doctoronbg.png) no-repeat 21px 9px;
+}
+
+.rules li:hover {
+	background: #8abce6 url(../images/rulesonbg.png) no-repeat 21px 9px;
+}
+
+.part_other:hover {
+	color: #ffffff;
 }
 
 .part_cur {
